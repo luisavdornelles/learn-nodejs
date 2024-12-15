@@ -1,2 +1,2 @@
-# learn-nodejs_modules-example
-Zero to Mastery Node JS Course - Package management section
+# learn-nodejs
+Zero to Mastery Node JS Course 
