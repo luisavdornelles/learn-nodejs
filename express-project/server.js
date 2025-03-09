@@ -17,6 +17,17 @@ const friends = [
     }
 ];
 
+// Middleware
+// This will run before any route is called
+// Logs request and response time
+app.use((req, res, next) => {
+    const start = Date.now();
+    next();
+    // after route is done, this will run
+    const delta = Date.now() - start;
+    console.log(`${req.method} ${req.url} took ${delta} ms`);
+});
+
 app.get("/friends", (req, res) => {
     res.json(friends);
 });
