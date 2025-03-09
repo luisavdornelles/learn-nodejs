@@ -18,6 +18,7 @@ const friends = [
 ];
 
 // Middleware
+
 // This will run before any route is called
 // Logs request and response time
 app.use((req, res, next) => {
@@ -28,6 +29,26 @@ app.use((req, res, next) => {
     console.log(`${req.method} ${req.url} took ${delta} ms`);
 });
 
+app.use(express.json());
+
+// Routes
+
+// POST /friends
+app.post("/friends", (req, res) => {
+    if (!req.body.name) {
+        return res.status(400).json({error: "Name is required"});
+    }
+
+    const newFriend = {
+        name: req.body.name,
+        id: friends.length
+    };
+
+    friends.push(newFriend);
+    res.status(201).json(newFriend);
+});
+
+// GET /friends
 app.get("/friends", (req, res) => {
     res.json(friends);
 });
