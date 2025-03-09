@@ -8,6 +8,10 @@ const friendsRouter = require("./routes/friends.router");
 const messagesRouter = require("./routes/messages.router");
 
 const app = express();
+
+app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "views"));
+
 const PORT = 3000;
 
 // Middleware
@@ -22,10 +26,16 @@ app.use((req, res, next) => {
     console.log(`${req.method} ${req.baseUrl}${req.url} took ${delta} ms`);
 });
 
-app.use("/site", express.static(path.join(__dirname, "public")));
+app.use("/public", express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
 // Routes
+app.get("/", (req, res) => {
+    res.render("index", { 
+        title: "Express Project",
+        caption: "Welcome to Express Project"
+    });
+});
 app.use("/friends", friendsRouter);
 app.use("/messages", messagesRouter);
 
