@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+This front-end code inside the `client` directory was provided by the course "The Complete NodeJS Course". It serves as a starting point for building a React application.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
