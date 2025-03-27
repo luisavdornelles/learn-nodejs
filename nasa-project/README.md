@@ -14,3 +14,17 @@ nasa-project/
 ├── server/             # Backend code
 └── README.md           # Project documentation
 ```
+
+## Scripts
+
+- **Install Dependencies**:  
+  `npm run install` - Installs dependencies for both the server and client.
+
+- **Run Server**:  
+  `npm run server` - Starts the server in watch mode.
+
+- **Run Client**:  
+  `npm run client` - Starts the client application.
+
+- **Run Both (Server & Client)**:  
+  `npm run watch` - Runs both the server and client concurrently.
