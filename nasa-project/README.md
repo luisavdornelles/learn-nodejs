@@ -28,3 +28,6 @@ nasa-project/
 
 - **Run Both (Server & Client)**:  
   `npm run watch` - Runs both the server and client concurrently.
+
+- **Deploy**:  
+  `npm run deploy` - Builds and deploys the project to the production environment.
