@@ -21,7 +21,7 @@ nasa-project/
   `npm run install` - Installs dependencies for both the server and client.
 
 - **Run Server**:  
-  `npm run server` - Starts the server in watch mode.
+  `npm run server` - Starts the server in watch mode (using FE static files from the "public" folder)
 
 - **Run Client**:  
   `npm run client` - Starts the client application.
