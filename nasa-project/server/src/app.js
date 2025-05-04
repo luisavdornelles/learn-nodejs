@@ -24,9 +24,8 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 app.use(planetsRouter);
 app.use(launchesRouter);
 
-// code added on tutorial, but it didn't seem necessary. works either way
-// app.get("/", (req, res) => {
-//     res.send(path.join(__dirname, "..", "public", "index.html"))
-// });
+app.get("/*", (req, res) => {
+    res.send(path.join(__dirname, "..", "public", "index.html"));
+});
 
 module.exports = app;
